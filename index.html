@@ -3,111 +3,126 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aircall – AI-Powered Customer Conversations</title>
-  <meta name="description" content="Aircall helps sales and support teams handle AI-powered customer conversations with cloud calling, integrations, analytics, routing and call recording." />
+  <title>Cloud Phone System Guide (2026)</title>
+  <meta name="description" content="Independent guide to cloud phone systems for sales and support. Compare features like call routing, analytics, CRM integrations, and call recording." />
+
+  <!-- OPTIONAL: Add your GTM ID below -->
+  <!--
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');
+  </script>
+  -->
 
   <style>
     :root{
-      --bg:#070a12;
-      --card:#0e1426;
-      --text:#eaf0ff;
-      --muted:#aebcff;
-      --line:rgba(255,255,255,.10);
+      --bg:#ffffff;
+      --text:#0b1220;
+      --muted:#4b5563;
+      --line:rgba(15,23,42,.12);
 
-      --primary:#00c389;      /* green */
-      --primary2:#00a6ff;     /* blue */
-      --accent:#7b68ff;       /* purple */
+      --blue:#2f7dff;
+      --purple:#b35cff;
+      --green:#22c55e;
+      --yellow:#ffb000;
+      --danger:#ef4444;
 
-      --shadow: 0 22px 60px rgba(0,0,0,.45);
-      --radius:22px;
-      --max:1160px;
+      --shadow: 0 18px 45px rgba(15,23,42,.10);
+      --radius:18px;
+      --max:1120px;
     }
 
     *{box-sizing:border-box}
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background:
+        radial-gradient(1100px 650px at 18% 10%, rgba(179,92,255,.10), transparent 60%),
+        radial-gradient(900px 650px at 85% 25%, rgba(47,125,255,.10), transparent 60%),
+        radial-gradient(900px 700px at 70% 95%, rgba(255,176,0,.06), transparent 55%),
+        radial-gradient(800px 650px at 35% 85%, rgba(34,197,94,.06), transparent 60%),
+        var(--bg);
       color:var(--text);
       line-height:1.5;
-      background:
-        radial-gradient(1200px 700px at 18% 10%, rgba(0,195,137,.12), transparent 60%),
-        radial-gradient(900px 700px at 78% 22%, rgba(0,166,255,.14), transparent 60%),
-        radial-gradient(900px 700px at 70% 95%, rgba(123,104,255,.10), transparent 55%),
-        var(--bg);
     }
 
     a{color:inherit; text-decoration:none}
-    .wrap{max-width:var(--max); margin:0 auto; padding:26px 18px 86px}
+    .wrap{max-width:var(--max); margin:0 auto; padding:26px 18px 110px}
 
-    /* Top nav */
     .topbar{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      padding:10px 0 18px;
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:6px 0 16px;
     }
-
-    .brand{display:flex; align-items:center; gap:10px; font-weight:900; letter-spacing:-.2px}
-    .logo{
-      width:34px; height:34px; border-radius:12px;
-      background:linear-gradient(135deg, rgba(0,195,137,1), rgba(0,166,255,1));
-      box-shadow:0 10px 24px rgba(0,0,0,.35);
+    .brand{display:flex; align-items:center; gap:10px; font-weight:900}
+    .dot{
+      width:10px; height:10px; border-radius:50%;
+      background:linear-gradient(135deg, var(--blue), var(--purple));
+      box-shadow:0 0 0 6px rgba(47,125,255,.10);
     }
-
     .pill{
       border:1px solid var(--line);
       padding:8px 12px;
       border-radius:999px;
       color:var(--muted);
       font-size:13px;
-      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      background:rgba(255,255,255,.65);
+      backdrop-filter: blur(8px);
+      white-space:nowrap;
     }
 
-    /* Cards */
-    .card{
-      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      border:1px solid var(--line);
-      border-radius:var(--radius);
+    .panel{
+      background:rgba(255,255,255,.72);
+      backdrop-filter: blur(10px);
+      border:1px solid rgba(15,23,42,.10);
+      border-radius:26px;
       box-shadow:var(--shadow);
       padding:24px;
+      margin-top:16px;
     }
 
-    /* Hero */
     .hero{
       display:grid;
       grid-template-columns: 1.15fr .85fr;
-      gap:16px;
+      gap:18px;
       align-items:stretch;
-      margin-top:6px;
     }
-    @media(max-width:920px){
-      .hero{grid-template-columns:1fr}
-    }
+    @media(max-width:900px){ .hero{grid-template-columns:1fr} }
 
     h1{
-      font-size:44px;
+      font-size:42px;
       line-height:1.08;
       margin:0 0 12px;
-      letter-spacing:-.9px;
+      letter-spacing:-.8px;
     }
-    @media(max-width:520px){
-      h1{font-size:34px}
+    @media(max-width:520px){ h1{font-size:32px} }
+
+    .hglow{
+      background: linear-gradient(135deg, rgba(47,125,255,1), rgba(179,92,255,1));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+      text-shadow: 0 18px 40px rgba(47,125,255,.12);
     }
 
-    /* Highlight for brand word */
-    .hl{
-      background: linear-gradient(135deg, rgba(0,195,137,1), rgba(0,166,255,1));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      text-shadow: 0 12px 35px rgba(0,166,255,.18);
-    }
-    @media(max-width:520px){
-      h1{font-size:34px}
+    .sub{
+      color:var(--muted);
+      font-size:16px;
+      margin:0 0 16px;
+      max-width:70ch;
     }
 
-    .sub{color:var(--muted); font-size:16px; margin:0 0 18px; max-width:70ch}
+    .badgeRow{display:flex; gap:10px; flex-wrap:wrap; margin:12px 0 0}
+    .badge{
+      font-size:12px;
+      color:var(--muted);
+      border:1px solid var(--line);
+      padding:7px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.75);
+    }
 
     .btnrow{display:flex; gap:12px; flex-wrap:wrap}
     .btn{
@@ -116,168 +131,135 @@
       justify-content:center;
       gap:10px;
       padding:12px 16px;
-      border-radius:16px;
+      border-radius:14px;
       font-weight:900;
-      border:1px solid rgba(255,255,255,.10);
+      border:1px solid rgba(15,23,42,.12);
       cursor:pointer;
       transition:.18s ease;
       user-select:none;
+      background:#fff;
     }
     .btn.primary{
-      background:linear-gradient(135deg, rgba(0,195,137,1), rgba(0,166,255,1));
+      background:linear-gradient(135deg, rgba(47,125,255,1), rgba(179,92,255,1));
+      color:#fff;
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow:0 14px 34px rgba(47,125,255,.18);
     }
-    .btn.secondary{background:rgba(255,255,255,.04)}
-    .btn:hover{transform:translateY(-1px); filter:brightness(1.05)}
+    .btn.secondary{background:rgba(255,255,255,.75); color:var(--text)}
+    .btn:hover{transform:translateY(-1px); filter:brightness(1.02)}
 
-    .note{margin-top:12px; color:var(--muted); font-size:13px}
+    .note{margin-top:10px; color:var(--muted); font-size:13px}
 
-    .grid3{display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin-top:14px}
-    @media(max-width:920px){ .grid3{grid-template-columns:1fr} }
-
-    .mini{
-      background:rgba(255,255,255,.03);
-      border:1px solid var(--line);
+    .box{
+      border:1px solid rgba(15,23,42,.10);
+      background:rgba(255,255,255,.70);
       border-radius:18px;
-      padding:14px;
+      padding:16px;
     }
-    .mini b{display:block; margin-bottom:6px}
-    .mini p{margin:0; color:var(--muted); font-size:14px}
+    .box h3{margin:0 0 8px; font-size:18px}
 
-    /* Right side */
-    .side h2{margin:0 0 10px; font-size:18px; letter-spacing:-.2px}
-    .checklist{margin:0; padding:0; list-style:none; display:grid; gap:10px}
-    .checklist li{
+    .list{margin:0; padding:0; list-style:none; display:grid; gap:10px}
+    .list li{
       display:flex; gap:10px; align-items:flex-start;
       color:var(--muted);
-      background:rgba(255,255,255,.03);
-      border:1px solid var(--line);
-      border-radius:16px;
+      background:rgba(255,255,255,.70);
+      border:1px solid rgba(15,23,42,.10);
+      border-radius:14px;
       padding:12px;
     }
     .tick{
       width:18px; height:18px; border-radius:7px;
-      background:rgba(0,195,137,.14);
-      border:1px solid rgba(0,195,137,.35);
+      background:rgba(34,197,94,.10);
+      border:1px solid rgba(34,197,94,.35);
       display:flex; align-items:center; justify-content:center;
-      color:rgba(0,195,137,1);
-      font-weight:900; flex:0 0 auto;
+      color:var(--green); font-weight:900; flex:0 0 auto;
       margin-top:1px;
     }
 
-    /* Sections */
-    .section{margin-top:16px}
-    .section h3{margin:0 0 10px; font-size:18px; letter-spacing:-.2px}
-
-    /* Integrations */
-    .integrations{
+    .cards{
       display:grid;
-      grid-template-columns:repeat(4, 1fr);
-      gap:14px;
+      grid-template-columns: repeat(3, 1fr);
+      gap:12px;
       margin-top:12px;
     }
-    @media(max-width:920px){ .integrations{grid-template-columns:1fr 1fr} }
-    @media(max-width:520px){ .integrations{grid-template-columns:1fr} }
+    @media(max-width:900px){ .cards{grid-template-columns:1fr} }
 
-    .int{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      border:1px solid var(--line);
-      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-      border-radius:20px;
+    .card{
+      border:1px solid rgba(47,125,255,.22);
+      background:linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.70));
+      border-radius:18px;
       padding:16px;
+      box-shadow:0 16px 40px rgba(47,125,255,.10);
+      transition: .18s ease;
       position:relative;
       overflow:hidden;
     }
-
-    /* Soft colorful glow per card */
-    .int::before{
+    .card:before{
       content:"";
       position:absolute;
       inset:-2px;
-      opacity:.65;
-      filter: blur(18px);
-      background: radial-gradient(420px 120px at 20% 10%, rgba(0,195,137,.22), transparent 60%),
-                  radial-gradient(420px 120px at 90% 20%, rgba(0,166,255,.18), transparent 60%),
-                  radial-gradient(420px 120px at 60% 95%, rgba(123,104,255,.14), transparent 60%);
+      background:
+        radial-gradient(650px 260px at 0% 0%, rgba(179,92,255,.12), transparent 55%),
+        radial-gradient(650px 260px at 100% 0%, rgba(47,125,255,.10), transparent 55%),
+        radial-gradient(650px 260px at 50% 120%, rgba(34,197,94,.08), transparent 60%);
       pointer-events:none;
+      z-index:0;
     }
+    .card > *{position:relative; z-index:1}
+    .card:hover{
+      transform: translateY(-2px);
+      box-shadow:0 22px 55px rgba(47,125,255,.14);
+      border-color: rgba(179,92,255,.30);
+    }
+    .card b{display:block; margin-bottom:6px; font-size:16px}
+    .card p{margin:0; color:var(--muted); font-size:14px}
 
-    .int > *{position:relative; z-index:1;}
-    .badge{
-      width:46px; height:46px;
-      border-radius:18px;
-      background:linear-gradient(135deg, rgba(0,195,137,.18), rgba(0,166,255,.16));
-      border:1px solid rgba(255,255,255,.10);
+    .ctaStrip{
       display:flex;
       align-items:center;
-      justify-content:center;
-      font-weight:900;
-      color:var(--text);
-      letter-spacing:-.4px;
-      box-shadow:0 16px 40px rgba(0,0,0,.35);
-    }
-    .int b{display:block; font-size:16px; letter-spacing:-.2px}
-    .int span{display:block; color:var(--muted); font-size:13px}
-
-    .iconRow{
-      display:grid;
-      grid-template-columns:repeat(12, 1fr);
-      gap:10px;
+      justify-content:space-between;
+      gap:12px;
+      padding:14px;
+      border-radius:18px;
+      border:1px solid rgba(15,23,42,.10);
+      background:linear-gradient(135deg, rgba(47,125,255,.08), rgba(179,92,255,.08));
       margin-top:14px;
     }
-    @media(max-width:920px){ .iconRow{grid-template-columns:repeat(6, 1fr)} }
-    @media(max-width:520px){ .iconRow{grid-template-columns:repeat(4, 1fr)} }
+    .ctaStrip b{font-size:14px}
 
-    .ico{
-      height:46px;
-      border-radius:16px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:var(--muted);
-      font-weight:900;
-      letter-spacing:-.3px;
-    }
-
-    /* Replacement benefits */
-    .benefits{
-      display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:12px;
-      margin-top:12px;
-    }
-    @media(max-width:920px){ .benefits{grid-template-columns:1fr} }
-
-    .bcard{
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
+    /* Comparison table */
+    .tableWrap{
+      overflow:auto;
       border-radius:18px;
-      padding:16px;
+      border:1px solid rgba(15,23,42,.10);
+      background:rgba(255,255,255,.70);
     }
-    .bcard b{display:block; margin-bottom:6px}
-    .bcard p{margin:0; color:var(--muted); font-size:14px}
+    table{width:100%; border-collapse:collapse; min-width:820px}
+    th,td{padding:12px; text-align:left; border-top:1px solid rgba(15,23,42,.08)}
+    th{background:rgba(15,23,42,.03); border-top:none; font-weight:900}
+    td{color:var(--muted); font-size:14px}
+    .yes{color:var(--green); font-weight:900}
+    .mid{color:var(--yellow); font-weight:900}
 
     /* FAQ */
-    .faq{display:grid; gap:10px}
-    details{border:1px solid var(--line); background:rgba(255,255,255,.03); border-radius:18px; padding:14px}
+    details{
+      border:1px solid rgba(15,23,42,.10);
+      background:rgba(255,255,255,.70);
+      border-radius:16px;
+      padding:14px;
+    }
     summary{cursor:pointer; font-weight:900; color:var(--text)}
     details p{margin:10px 0 0; color:var(--muted); font-size:14px}
-
-    .footer{margin-top:18px; color:var(--muted); font-size:12px; opacity:.9}
 
     /* Sticky CTA */
     .sticky{
       position:fixed;
       left:0; right:0; bottom:0;
+      background:rgba(255,255,255,.82);
+      backdrop-filter: blur(10px);
+      border-top:1px solid rgba(15,23,42,.12);
       padding:10px 12px;
-      background:rgba(7,10,18,.76);
-      backdrop-filter: blur(14px);
-      border-top:1px solid var(--line);
-      display:none;
-      z-index:99;
+      z-index:50;
     }
     .sticky .inner{
       max-width:var(--max);
@@ -287,198 +269,288 @@
       align-items:center;
       justify-content:space-between;
     }
-    .sticky .text{font-size:13px; color:var(--muted)}
-    @media(max-width:920px){ .sticky{display:block} }
+    .sticky .txt{font-size:13px; color:var(--muted)}
+    @media(max-width:700px){
+      .sticky .txt{display:none}
+    }
+
+    .footer{
+      margin-top:18px;
+      color:var(--muted);
+      font-size:12px;
+      opacity:.95;
+    }
+    .footer a{text-decoration:underline}
   </style>
 
   <script type="text/javascript" src="https://inpmz.ttrk.io/track.js?rtkcmpid=690c74682ef1eddcffef976d"></script>
 </head>
 
 <body>
-  <!-- OPTIONAL: GTM noscript -->
-  <!--
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  -->
-
   <div class="wrap">
 
     <div class="topbar">
       <div class="brand">
-        <div class="logo"></div>
-        <div>AIR Calling Guide</div>
+        <div class="dot"></div>
+        <div>Aircall Cloud Phone Guide</div>
       </div>
-      <div class="pill">AI Calling • Sales & Support</div>
+      <div class="pill">Independent • Updated 2026</div>
     </div>
 
-    <div class="hero">
-      <div class="card">
-        <h1><span class="hl">Aircall</span> – AI-powered customer conversations made easy</h1>
-        <p class="sub">
-          Find a modern cloud phone system that helps your team call faster, support customers,
-          and connect everything to your CRM and helpdesk.
-        </p>
+    <div class="panel">
+      <div class="hero">
 
-        <div class="btnrow">
-          <a class="btn primary" id="ctaTop" href="https://inpmz.ttrk.io/click" rel="nofollow noopener" target="_blank">
-            Get Free Access →
-          </a>
-          <a class="btn secondary" href="https://inpmz.ttrk.io/click">
-            See Integrations
-          </a>
-        </div>
+        <div>
+          <h1><span class=\"hglow\">Aircall</span> cloud phone system for sales & support teams</h1>
+          <p class="sub">
+            Compare modern cloud phone systems used by teams for calling, routing, recording, analytics, and CRM integrations. This is an independent guide page about Aircall.
+          </p>
 
-        <div class="note">
-          Works for inbound + outbound • Call recording • Smart routing • Analytics
-        </div>
-
-        <div class="grid3">
-          <div class="mini">
-            <b>Close more deals</b>
-            <p>Power dialer workflows and clean call tracking for sales teams.</p>
+          <div class="btnrow">
+            <a class="btn primary" id="ctaTop" href="#" rel="nofollow noopener" target="_blank">
+              View Plans on Provider Site →
+            </a>
+            <a class="btn secondary" href="#comparison">
+              Compare Features
+            </a>
           </div>
-          <div class="mini">
-            <b>Support faster</b>
-            <p>Route calls to the right agent automatically with IVR and rules.</p>
+
+          <div class="badgeRow">
+            <span class="badge">No hardware needed</span>
+            <span class="badge">Works on web + mobile</span>
+            <span class="badge">For sales & support</span>
+            <span class="badge">CRM integrations</span>
           </div>
-          <div class="mini">
-            <b>Everything connected</b>
-            <p>Sync calls, notes and outcomes into your CRM and helpdesk.</p>
+
+          <div class="note">
+            Disclosure: We may earn a commission from partner links. Trademarks belong to their owners.
+          </div>
+
+          <div class="ctaStrip">
+            <div>
+              <b>Tip:</b> Open in a new tab to keep this guide while reviewing pricing.
+              <div class="note" style="margin:4px 0 0">Secure checkout happens on the provider website.</div>
+            </div>
+            <a class="btn primary" id="ctaStrip" href="#" rel="nofollow noopener" target="_blank">Get Started →</a>
           </div>
         </div>
-      </div>
 
-      <div class="card side">
-        <h2>What you should expect</h2>
-        <ul class="checklist">
-          <li><span class="tick">✓</span><span>Free access / trial available</span></li>
-          <li><span class="tick">✓</span><span>Stable calling quality for teams</span></li>
-          <li><span class="tick">✓</span><span>Inbound + outbound from one place</span></li>
-          <li><span class="tick">✓</span><span>CRM + helpdesk integrations</span></li>
-          <li><span class="tick">✓</span><span>Dashboards for reporting</span></li>
-        </ul>
+        <div class="box">
+          <h3>What teams usually need</h3>
+          <ul class="list">
+            <li><span class="tick">✓</span><span><b style="color:#0b1220">Smart call routing</b> — IVR, business hours, queues</span></li>
+            <li><span class="tick">✓</span><span><b style="color:#0b1220">Call recording</b> — quality + compliance support</span></li>
+            <li><span class="tick">✓</span><span><b style="color:#0b1220">Analytics</b> — track answered rate & performance</span></li>
+            <li><span class="tick">✓</span><span><b style="color:#0b1220">Integrations</b> — HubSpot, Salesforce, Pipedrive</span></li>
+          </ul>
 
-        <div class="section">
-          <a class="btn primary" id="ctaSide" href="https://inpmz.ttrk.io/click" rel="nofollow noopener" target="_blank" style="width:100%">
-            Start Free →
-          </a>
+          <div class="btnrow" style="margin-top:14px">
+            <a class="btn primary" id="ctaSide" href="#" rel="nofollow noopener" target="_blank" style="width:100%">
+              Check Pricing →
+            </a>
+          </div>
 
+          <div class="note">
+            This page is NOT the official provider website.
+          </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Integrations section (Aircall style) -->
-    <div class="section card" id="integrations">
-      <h3>Connected to the tools you love</h3>
-      <p class="sub" style="margin-top:-2px">
-        The leading app ecosystem for voice. Connect your calling stack to your critical tools and workflows.
-      </p>
-
-      <div class="integrations">
-        <div class="int"><div class="badge">S</div><div><b>Salesforce</b><span>CRM</span></div></div>
-        <div class="int"><div class="badge">H</div><div><b>HubSpot</b><span>CRM</span></div></div>
-        <div class="int"><div class="badge">Z</div><div><b>Zendesk</b><span>Help Desk</span></div></div>
-        <div class="int"><div class="badge">I</div><div><b>Intercom</b><span>Support + Live Chat</span></div></div>
-        <div class="int"><div class="badge">M</div><div><b>monday.com</b><span>Work OS</span></div></div>
-        <div class="int"><div class="badge">Sh</div><div><b>Shopify</b><span>eCommerce</span></div></div>
-        <div class="int"><div class="badge">G</div><div><b>Gorgias</b><span>eCommerce Helpdesk</span></div></div>
-        <div class="int"><div class="badge">T</div><div><b>Microsoft Teams</b><span>Collaboration</span></div></div>
-      </div>
-
-      <div class="btnrow" style="margin-top:14px; justify-content:center">
-        <a class="btn secondary" href="https://inpmz.ttrk.io/click" id="ctaIntegrations" rel="nofollow noopener" target="_blank">
-          See all integrations →
-        </a>
       </div>
     </div>
 
-    <!-- Replacement section (instead of heavy feature grid) -->
-    <div class="section card" id="features">
-      <h3>Built for sales + support workflows</h3>
-      <p class="sub" style="margin-top:-2px">
-        A clean set of features that matter most for calling teams.
-      </p>
 
-      <div class="benefits">
-        <div class="bcard"><b>Get Free Access</b><p>Start with a free trial to test the platform.</p></div>
-        <div class="bcard"><b>Inbound + Outbound</b><p>Handle support and sales calls from one place.</p></div>
-        <div class="bcard"><b>Call Recording</b><p>Review calls for training and quality control.</p></div>
-        <div class="bcard"><b>Smart Routing + IVR</b><p>Send callers to the right agent automatically.</p></div>
-        <div class="bcard"><b>CRM Integrations</b><p>Sync outcomes to HubSpot, Salesforce, Zendesk and more.</p></div>
-        <div class="bcard"><b>Analytics Dashboard</b><p>Track agent activity and call outcomes clearly.</p></div>
+    <div class="panel" id="features">
+      <h2 style="margin:0 0 8px; font-size:22px; letter-spacing:-.2px">Top features that reduce missed calls</h2>
+      <p class="sub" style="margin-top:0">These are the features most teams look for when switching from old VoIP tools.</p>
+
+      <div class="cards">
+        <div class="card">
+          <b>Call Routing & IVR</b>
+          <p>Route calls to the right team automatically based on menu, hours, or skills.</p>
+        </div>
+        <div class="card">
+          <b>Shared Inbox for Calls</b>
+          <p>Teams can collaborate with notes, tags, and follow-ups for every call.</p>
+        </div>
+        <div class="card">
+          <b>Call Analytics</b>
+          <p>Track answer rate, missed calls, peak hours, and team performance.</p>
+        </div>
+        <div class="card">
+          <b>CRM Integrations</b>
+          <p>Sync calls to your CRM so every lead and deal has full context.</p>
+        </div>
+        <div class="card">
+          <b>Call Recording</b>
+          <p>Train reps, improve quality, and keep a record of important conversations.</p>
+        </div>
+        <div class="card">
+          <b>International Numbers</b>
+          <p>Get local numbers in supported countries and scale globally.</p>
+        </div>
       </div>
 
       <div class="btnrow" style="margin-top:14px">
-        <a class="btn primary" id="ctaMid" href="https://inpmz.ttrk.io/click" rel="nofollow noopener" target="_blank">
-          Get Free Access →
-        </a>
-        <a class="btn secondary" href="#faq">
-          FAQs
+        <a class="btn primary" id="ctaFeatures" href="#" rel="nofollow noopener" target="_blank">
+          View All Features →
         </a>
       </div>
     </div>
 
-    <div class="section card" id="faq">
-      <h3>FAQ</h3>
-      <div class="faq">
+
+    <div class="panel" id="comparison">
+      <h2 style="margin:0 0 8px; font-size:22px; letter-spacing:-.2px">Quick comparison (buyer checklist)</h2>
+      <p class="sub" style="margin-top:0">A clean way to compare a modern cloud phone system vs older VoIP tools.</p>
+
+      <div class="tableWrap">
+        <table>
+          <thead>
+            <tr>
+              <th>What teams compare</th>
+              <th>Modern Cloud Phone</th>
+              <th>Old / basic VoIP</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Setup time</td>
+              <td class="yes">Minutes</td>
+              <td class="mid">Days</td>
+            </tr>
+            <tr>
+              <td>Call routing + IVR</td>
+              <td class="yes">Included</td>
+              <td class="mid">Limited</td>
+            </tr>
+            <tr>
+              <td>CRM integrations</td>
+              <td class="yes">Strong</td>
+              <td class="mid">Basic</td>
+            </tr>
+            <tr>
+              <td>Analytics & reporting</td>
+              <td class="yes">Advanced</td>
+              <td class="mid">Minimal</td>
+            </tr>
+            <tr>
+              <td>Works for remote teams</td>
+              <td class="yes">Yes</td>
+              <td class="mid">Sometimes</td>
+            </tr>
+            <tr>
+              <td>Scales for sales/support</td>
+              <td class="yes">Yes</td>
+              <td class="mid">Not ideal</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="btnrow" style="margin-top:14px">
+        <a class="btn primary" id="ctaCompare" href="#" rel="nofollow noopener" target="_blank">
+          See Pricing & Plans →
+        </a>
+        <a class="btn secondary" href="#faq">FAQ</a>
+      </div>
+
+      <div class="note">Note: Plan availability and pricing can change. Always confirm on the provider site.</div>
+    </div>
+
+
+    <div class="panel" id="offers">
+      <h2 style="margin:0 0 8px; font-size:22px; letter-spacing:-.2px">Offers & value (why teams switch)</h2>
+      <p class="sub" style="margin-top:0">These points help users feel confident before clicking out.</p>
+
+      <div class="cards">
+        <div class="card">
+          <b>Free demo available</b>
+          <p>See how routing, recording, and analytics work before moving your team.</p>
+        </div>
+        <div class="card">
+          <b>Fast onboarding</b>
+          <p>Most teams can set up numbers, users, and routing in a short time.</p>
+        </div>
+        <div class="card">
+          <b>Flexible plans</b>
+          <p>Scale up or down based on team size and calling volume.</p>
+        </div>
+      </div>
+
+      <div class="btnrow" style="margin-top:14px">
+        <a class="btn primary" id="ctaOffers" href="#" rel="nofollow noopener" target="_blank">
+          Get Started →
+        </a>
+        <a class="btn secondary" id="ctaPricing" href="#" rel="nofollow noopener" target="_blank">
+          View Pricing
+        </a>
+      </div>
+
+      <div class="note">Tip: Use the provider website for the latest offers and plan details.</div>
+    </div>
+
+
+    <div class="panel" id="faq">
+      <h2 style="margin:0 0 8px; font-size:22px; letter-spacing:-.2px">FAQ</h2>
+      <div style="display:grid; gap:10px; margin-top:10px">
         <details>
-          <summary>Is this good for small teams?</summary>
-          <p>Yes. Cloud calling works well for small sales and support teams, and scales as you grow.</p>
+          <summary>Is this the official website?</summary>
+          <p>No. This is an independent guide page. Buttons open the provider in a new tab.</p>
         </details>
         <details>
-          <summary>Does it work for inbound and outbound calls?</summary>
-          <p>Yes. Most Aircall-style platforms support both inbound routing and outbound dialing workflows.</p>
+          <summary>Will my team need hardware?</summary>
+          <p>Most cloud phone systems work on web and mobile apps without desk phones.</p>
         </details>
         <details>
-          <summary>Can it connect with my CRM?</summary>
-          <p>Yes. Integrations typically include CRMs and helpdesks like HubSpot, Salesforce, Zendesk and more.</p>
+          <summary>Does it work with HubSpot / Salesforce?</summary>
+          <p>Many modern platforms support CRM integrations. Confirm on the provider website.</p>
         </details>
         <details>
-          <summary>Can I track performance?</summary>
-          <p>Yes. Analytics dashboards help you track call volume, outcomes, and agent activity.</p>
+          <summary>Can I track missed calls and performance?</summary>
+          <p>Yes. Analytics dashboards typically show answer rate, missed calls and call volume.</p>
         </details>
       </div>
 
       <div class="btnrow" style="margin-top:14px">
-        <a class="btn primary" id="ctaBottom" href="https://inpmz.ttrk.io/click" rel="nofollow noopener" target="_blank">
-          Start Free →
+        <a class="btn primary" id="ctaBottom" href="#" rel="nofollow noopener" target="_blank">
+          Visit Provider Website →
         </a>
       </div>
 
       <div class="footer">
-        Disclosure: This website contains affiliate links, which means we may receive a commission if you click a link and purchase something that we have recommended. While clicking these links won't cost you any extra money, it helps us keep this site up and running. We only promote products or services we genuinely believe will add value to our readers. <br> As an Associate and affiliate for other programs, we earn from qualifying purchases. All affiliate relationships are disclosed in accordance with the Federal Trade Commission’s 16 CFR, Part 255: “Guides Concerning the Use of Endorsements and Testimonials in Advertising.”
-      <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Condition</a></p>
+        <b>Disclosure:</b> This website contains affiliate links, which means we may receive a commission if you click a link and purchase something that we have recommended. While clicking these links won't cost you any extra money, it helps us keep this site up and running. We only promote products or services we genuinely believe will add value to our readers.
+As an Associate and affiliate for other programs, we earn from qualifying purchases. All affiliate relationships are disclosed in accordance with the Federal Trade Commission’s 16 CFR, Part 255: “Guides Concerning the Use of Endorsements and Testimonials in Advertising.”
+        <br><br>
+        <a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a>
       </div>
     </div>
 
   </div>
 
-  <!-- Sticky CTA (Mobile) -->
+
+  <!-- Sticky CTA (mobile + desktop) -->
   <div class="sticky">
     <div class="inner">
-      <div class="text">Want a modern calling tool? Start free.</div>
-      <a class="btn primary" id="ctaSticky" href="https://inpmz.ttrk.io/click" rel="nofollow noopener" target="_blank">
-        Get Free Access →
-      </a>
+      <div class="txt">Compare plans, features & pricing on the provider website.</div>
+      <a class="btn primary" id="ctaSticky" href="#" rel="nofollow noopener" target="_blank">Check Pricing →</a>
     </div>
   </div>
 
+
   <script>
-    // Put your outbound URL here (official / affiliate tracking)
+    // 1) Put your destination link here (affiliate link / tracking link)
     const OUT_URL = "https://inpmz.ttrk.io/click";
 
-    // Assign URL to all CTAs
+    // 2) Assign URL to all CTAs
     const ctas = [
-      "ctaTop","ctaSide","ctaMid","ctaBottom","ctaSticky",
-      "ctaIntegrations"
+      "ctaTop","ctaStrip","ctaSide","ctaFeatures",
+      "ctaCompare","ctaOffers","ctaPricing","ctaBottom","ctaSticky"
     ];
-
     ctas.forEach(id=>{
       const el = document.getElementById(id);
       if(el) el.href = OUT_URL;
     });
 
-    // Basic outbound click tracking (works with GTM/GA4)
+    // 3) Outbound click tracking (works with GTM/GA4)
     function trackOutbound(label){
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
@@ -491,10 +563,24 @@
     ctas.forEach(id=>{
       const el = document.getElementById(id);
       if(!el) return;
-      el.addEventListener("click", function(){
-        trackOutbound(id);
-      });
+      el.addEventListener("click", function(){ trackOutbound(id); });
     });
   </script>
 </body>
 </html>
+
+
+<!--
+====================================================
+CREATE THESE 3 EXTRA FILES (IMPORTANT FOR ADS TRUST)
+====================================================
+
+privacy.html
+terms.html
+contact.html
+
+Use the same legal page templates I made for AXA/Kikoff.
+Just replace the product name with: Cloud Phone System Guide
+
+Also: add your real email + business name + address in contact.html
+-->
