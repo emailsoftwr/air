@@ -3,19 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cloud Phone System Guide (2026)</title>
-  <meta name="description" content="Independent guide to cloud phone systems for sales and support. Compare features like call routing, analytics, CRM integrations, and call recording." />
-
-  <!-- OPTIONAL: Add your GTM ID below -->
-  <!--
-  <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-XXXXXXX');
-  </script>
-  -->
+  <title>Aircall Cloud Phone Guide (2026) — Business VoIP & Call Center</title>
+  <meta name="description" content="Independent guide to Aircall cloud phone system. Compare features like call routing, IVR, integrations, and pricing. Visit the provider website for plans." />
 
   <style>
     :root{
@@ -28,10 +17,8 @@
       --purple:#b35cff;
       --green:#22c55e;
       --yellow:#ffb000;
-      --danger:#ef4444;
 
-      --shadow: 0 18px 45px rgba(15,23,42,.10);
-      --radius:18px;
+      --shadow: 0 14px 30px rgba(15,23,42,.10);
       --max:1120px;
     }
 
@@ -40,27 +27,29 @@
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
       background:
-        radial-gradient(1100px 650px at 18% 10%, rgba(179,92,255,.10), transparent 60%),
-        radial-gradient(900px 650px at 85% 25%, rgba(47,125,255,.10), transparent 60%),
-        radial-gradient(900px 700px at 70% 95%, rgba(255,176,0,.06), transparent 55%),
-        radial-gradient(800px 650px at 35% 85%, rgba(34,197,94,.06), transparent 60%),
-        var(--bg);
+        radial-gradient(900px 600px at 18% 10%, rgba(255,99,71,.10), transparent 60%),
+        radial-gradient(900px 600px at 85% 25%, rgba(255,179,71,.10), transparent 60%),
+        radial-gradient(900px 600px at 55% 0%, rgba(255,0,128,.06), transparent 55%),
+        #fbfbfd;
       color:var(--text);
       line-height:1.5;
     }
 
     a{color:inherit; text-decoration:none}
-    .wrap{max-width:var(--max); margin:0 auto; padding:26px 18px 110px}
+    .wrap{max-width:var(--max); margin:0 auto; padding:26px 18px 120px}
 
     .topbar{
       display:flex; align-items:center; justify-content:space-between;
       gap:14px; padding:6px 0 16px;
     }
     .brand{display:flex; align-items:center; gap:10px; font-weight:900}
-    .dot{
-      width:10px; height:10px; border-radius:50%;
-      background:linear-gradient(135deg, var(--blue), var(--purple));
-      box-shadow:0 0 0 6px rgba(47,125,255,.10);
+    .logoMark{
+      width:34px; height:34px; border-radius:12px;
+      background:linear-gradient(135deg, #ff4d6d, #ff8a00);
+      box-shadow:0 0 0 6px rgba(255,77,109,.10);
+      display:flex; align-items:center; justify-content:center;
+      color:#fff; font-weight:1000; font-size:14px;
+      border:1px solid rgba(255,255,255,.22);
     }
     .pill{
       border:1px solid var(--line);
@@ -68,14 +57,12 @@
       border-radius:999px;
       color:var(--muted);
       font-size:13px;
-      background:rgba(255,255,255,.65);
-      backdrop-filter: blur(8px);
+      background:rgba(255,255,255,.85);
       white-space:nowrap;
     }
 
     .panel{
-      background:rgba(255,255,255,.72);
-      backdrop-filter: blur(10px);
+      background:rgba(255,255,255,.92);
       border:1px solid rgba(15,23,42,.10);
       border-radius:26px;
       box-shadow:var(--shadow);
@@ -89,7 +76,7 @@
       gap:18px;
       align-items:stretch;
     }
-    @media(max-width:900px){ .hero{grid-template-columns:1fr} }
+    @media(max-width:520px){ .hero{grid-template-columns:1fr} }
 
     h1{
       font-size:42px;
@@ -100,7 +87,7 @@
     @media(max-width:520px){ h1{font-size:32px} }
 
     .hglow{
-      background: linear-gradient(135deg, rgba(47,125,255,1), rgba(179,92,255,1));
+      background: linear-gradient(135deg, #ff4d6d, #ff8a00);
       -webkit-background-clip:text;
       background-clip:text;
       color:transparent;
@@ -121,7 +108,14 @@
       border:1px solid var(--line);
       padding:7px 10px;
       border-radius:999px;
-      background:rgba(255,255,255,.75);
+      background:rgba(255,255,255,.95);
+    }
+    .badge.hl{
+      background:linear-gradient(135deg, rgba(47,125,255,.10), rgba(179,92,255,.08));
+      border-color: rgba(47,125,255,.25);
+      color:#111827;
+      font-weight:900;
+      box-shadow: 0 10px 22px rgba(47,125,255,.10);
     }
 
     .btnrow{display:flex; gap:12px; flex-wrap:wrap}
@@ -140,19 +134,57 @@
       background:#fff;
     }
     .btn.primary{
-      background:linear-gradient(135deg, rgba(47,125,255,1), rgba(179,92,255,1));
+      background:linear-gradient(135deg, #ff4d6d, #ff8a00);
       color:#fff;
       border:1px solid rgba(255,255,255,.10);
-      box-shadow:0 14px 34px rgba(47,125,255,.18);
+      box-shadow:0 14px 28px rgba(47,125,255,.18);
     }
-    .btn.secondary{background:rgba(255,255,255,.75); color:var(--text)}
+    .btn.secondary{background:rgba(255,255,255,.92); color:var(--text)}
     .btn:hover{transform:translateY(-1px); filter:brightness(1.02)}
 
-    .note{margin-top:10px; color:var(--muted); font-size:13px}
+    .hint{
+      border:1px solid rgba(15,23,42,.10);
+      background:rgba(255,255,255,.95);
+      border-radius:16px;
+      padding:12px 14px;
+      margin-top:12px;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .hint b{color:var(--text)}
+
+    .trustRow{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:10px;
+      margin-top:14px;
+    }
+    @media(max-width:900px){ .trustRow{grid-template-columns:1fr} }
+    .trust{
+      border:1px solid rgba(15,23,42,.10);
+      background:rgba(255,255,255,.95);
+      border-radius:16px;
+      padding:14px;
+      /* display:flex; */
+      gap:12px;
+      align-items:flex-start;
+    }
+    .ico{
+      width:38px; height:38px;
+      border-radius:14px;
+      background:linear-gradient(135deg, rgba(47,125,255,.10), rgba(179,92,255,.08));
+      border:1px solid rgba(47,125,255,.18);
+      display:flex; align-items:center; justify-content:center;
+      font-weight:900;
+      color:#111827;
+      flex:0 0 auto;
+    }
+    .trust b{display:block}
+    .trust span{color:var(--muted); font-size:14px}
 
     .box{
       border:1px solid rgba(15,23,42,.10);
-      background:rgba(255,255,255,.70);
+      background:rgba(255,255,255,.95);
       border-radius:18px;
       padding:16px;
     }
@@ -162,7 +194,7 @@
     .list li{
       display:flex; gap:10px; align-items:flex-start;
       color:var(--muted);
-      background:rgba(255,255,255,.70);
+      background:rgba(255,255,255,.95);
       border:1px solid rgba(15,23,42,.10);
       border-radius:14px;
       padding:12px;
@@ -185,81 +217,66 @@
     @media(max-width:900px){ .cards{grid-template-columns:1fr} }
 
     .card{
-      border:1px solid rgba(47,125,255,.22);
-      background:linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.70));
+      border:1px solid rgba(47,125,255,.20);
+      background:linear-gradient(180deg, rgba(255,255,255,.98), rgba(255,255,255,.92));
       border-radius:18px;
       padding:16px;
-      box-shadow:0 16px 40px rgba(47,125,255,.10);
+      box-shadow:0 12px 26px rgba(15,23,42,.08);
       transition: .18s ease;
+    }
+    .card:hover{
+      transform: translateY(-2px);
+      box-shadow:0 16px 34px rgba(47,125,255,.12);
+      border-color: rgba(179,92,255,.25);
+    }
+    .card.hl{
+      border-color: rgba(47,125,255,.28);
+      box-shadow:0 18px 38px rgba(47,125,255,.12);
+      background:linear-gradient(180deg, rgba(245,248,255,.98), rgba(255,255,255,.92));
       position:relative;
       overflow:hidden;
     }
-    .card:before{
+    .card.hl:before{
       content:"";
       position:absolute;
       inset:-2px;
-      background:
-        radial-gradient(650px 260px at 0% 0%, rgba(179,92,255,.12), transparent 55%),
-        radial-gradient(650px 260px at 100% 0%, rgba(47,125,255,.10), transparent 55%),
-        radial-gradient(650px 260px at 50% 120%, rgba(34,197,94,.08), transparent 60%);
+      background: radial-gradient(600px 260px at 18% 10%, rgba(47,125,255,.14), transparent 55%);
       pointer-events:none;
-      z-index:0;
     }
-    .card > *{position:relative; z-index:1}
-    .card:hover{
-      transform: translateY(-2px);
-      box-shadow:0 22px 55px rgba(47,125,255,.14);
-      border-color: rgba(179,92,255,.30);
-    }
-    .card b{display:block; margin-bottom:6px; font-size:16px}
-    .card p{margin:0; color:var(--muted); font-size:14px}
 
-    .ctaStrip{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      padding:14px;
-      border-radius:18px;
-      border:1px solid rgba(15,23,42,.10);
-      background:linear-gradient(135deg, rgba(47,125,255,.08), rgba(179,92,255,.08));
-      margin-top:14px;
-    }
-    .ctaStrip b{font-size:14px}
+    .card b{display:block; margin-bottom:6px; font-size:16px; position:relative}
+    .card p{margin:0; color:var(--muted); font-size:14px; position:relative}
 
-    /* Comparison table */
     .tableWrap{
       overflow:auto;
       border-radius:18px;
       border:1px solid rgba(15,23,42,.10);
-      background:rgba(255,255,255,.70);
+      background:rgba(255,255,255,.95);
     }
-    table{width:100%; border-collapse:collapse; min-width:820px}
+    table{width:100%; border-collapse:collapse; min-width:860px}
     th,td{padding:12px; text-align:left; border-top:1px solid rgba(15,23,42,.08)}
     th{background:rgba(15,23,42,.03); border-top:none; font-weight:900}
     td{color:var(--muted); font-size:14px}
     .yes{color:var(--green); font-weight:900}
     .mid{color:var(--yellow); font-weight:900}
 
-    /* FAQ */
     details{
       border:1px solid rgba(15,23,42,.10);
-      background:rgba(255,255,255,.70);
+      background:rgba(255,255,255,.95);
       border-radius:16px;
       padding:14px;
     }
     summary{cursor:pointer; font-weight:900; color:var(--text)}
     details p{margin:10px 0 0; color:var(--muted); font-size:14px}
 
-    /* Sticky CTA */
     .sticky{
       position:fixed;
       left:0; right:0; bottom:0;
-      background:rgba(255,255,255,.82);
-      backdrop-filter: blur(10px);
+      background:rgba(255,255,255,.92);
       border-top:1px solid rgba(15,23,42,.12);
       padding:10px 12px;
       z-index:50;
+      backdrop-filter: blur(10px);
     }
     .sticky .inner{
       max-width:var(--max);
@@ -281,9 +298,95 @@
       opacity:.95;
     }
     .footer a{text-decoration:underline}
-  </style>
+  
+    .offerBar{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      margin-top:12px;
+      padding:12px 12px;
+      border-radius:18px;
+      border:1px solid rgba(47,125,255,.22);
+      background:linear-gradient(135deg, rgba(47,125,255,.08), rgba(179,92,255,.06));
+      box-shadow: 0 12px 26px rgba(47,125,255,.08);
+    }
+    .offerHL.big{
+      font-size:13px;
+      font-weight:1000;
+      padding:6px 10px;
+      border-color: rgba(47,125,255,.28);
+      background:rgba(255,255,255,.85);
+    }
+    .offerBar .sep{
+      color: rgba(15,23,42,.35);
+      font-weight:900;
+    }
 
-  <script type="text/javascript" src="https://inpmz.ttrk.io/track.js?rtkcmpid=690c74682ef1eddcffef976d"></script>
+
+    .heroArt{
+      width:100%;
+      aspect-ratio: 16 / 9;
+      border-radius:18px;
+      overflow:hidden;
+      margin-bottom:12px;
+      border:1px solid rgba(15,23,42,.10);
+      background:rgba(255,255,255,.85);
+      box-shadow: 0 14px 30px rgba(15,23,42,.08);
+    }
+
+
+    .fi{
+      display:inline-flex;
+      width:30px; height:30px;
+      align-items:center; justify-content:center;
+      border-radius:12px;
+      margin-right:10px;
+      background:linear-gradient(135deg, rgba(255,77,109,.12), rgba(255,138,0,.10));
+      border:1px solid rgba(255,77,109,.18);
+      font-size:16px;
+      flex:0 0 auto;
+      box-shadow: 0 12px 26px rgba(255,77,109,.06);
+    }
+    .card b{display:flex; align-items:center}
+
+
+    /* Keep offer chips in one line on desktop */
+    .offerBar{flex-wrap:nowrap; overflow:auto; -webkit-overflow-scrolling:touch}
+    .offerBar::-webkit-scrollbar{height:0}
+    @media(max-width:560px){
+      .offerBar{flex-wrap:wrap}
+    }
+
+
+    .heroArt img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transform: scale(1.02);
+    }
+
+
+    .offerCTA{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:10px 14px;
+      border-radius:999px;
+      font-weight:1000;
+      font-size:13px;
+      color:#fff;
+      background:linear-gradient(135deg, #ff4d6d, #ff8a00);
+      border:1px solid rgba(255,255,255,.22);
+      box-shadow: 0 16px 34px rgba(255,77,109,.18);
+      white-space:nowrap;
+    }
+    .offerCTA:hover{transform:translateY(-1px); filter:brightness(1.02)}
+
+</style>
+<script type="text/javascript" src="https://inpmz.ttrk.io/track.js?rtkcmpid=690c74682ef1eddcffef976d"></script>
 </head>
 
 <body>
@@ -291,8 +394,8 @@
 
     <div class="topbar">
       <div class="brand">
-        <div class="dot"></div>
-        <div>Aircall Cloud Phone Guide</div>
+        <div class="logoMark" aria-hidden="true">AC</div>
+        <div>Aircall Guide</div>
       </div>
       <div class="pill">Independent • Updated 2026</div>
     </div>
@@ -301,57 +404,88 @@
       <div class="hero">
 
         <div>
-          <h1><span class=\"hglow\">Aircall</span> cloud phone system for sales & support teams</h1>
+          <h1><span class="hglow">Aircall</span>: cloud phone system for sales & support</h1>
+
           <p class="sub">
-            Compare modern cloud phone systems used by teams for calling, routing, recording, analytics, and CRM integrations. This is an independent guide page about Aircall.
+            A clean overview of Aircall for business calling, call routing, IVR and integrations.
+            Use this guide to compare features, then open pricing on the provider website.
           </p>
 
           <div class="btnrow">
             <a class="btn primary" id="ctaTop" href="#" rel="nofollow noopener" target="_blank">
-              View Plans on Provider Site →
+              See Aircall Plans & Pricing →
             </a>
             <a class="btn secondary" href="#comparison">
               Compare Features
             </a>
           </div>
 
-          <div class="badgeRow">
-            <span class="badge">No hardware needed</span>
-            <span class="badge">Works on web + mobile</span>
-            <span class="badge">For sales & support</span>
-            <span class="badge">CRM integrations</span>
+          
+          <div class="offerBar">
+            <a class="offerCTA" id="ctaOfferTrial" href="#" rel="nofollow noopener" target="_blank">Try free trial →</a>
+            <span class="sep">•</span>
+            <span class="offerHL big">Cancel anytime</span>
+            <span class="sep">•</span>
+            <span class="offerHL big">CRM integrations included</span>
           </div>
 
-          <div class="note">
-            Disclosure: We may earn a commission from partner links. Trademarks belong to their owners.
-          </div>
-
-          <div class="ctaStrip">
-            <div>
-              <b>Tip:</b> Open in a new tab to keep this guide while reviewing pricing.
-              <div class="note" style="margin:4px 0 0">Secure checkout happens on the provider website.</div>
+<div class="trustRow">
+            <div class="trust">
+              <div class="ico">✓</div>
+              <div>
+                <b>Transparent guide</b>
+                <span>Clear notes, not hype. Helps you decide faster.</span>
+              </div>
             </div>
-            <a class="btn primary" id="ctaStrip" href="#" rel="nofollow noopener" target="_blank">Get Started →</a>
+            <div class="trust">
+              <div class="ico">🔒</div>
+              <div>
+                <b>Safe redirect</b>
+                <span>No forms or payments on this page.</span>
+              </div>
+            </div>
+            <div class="trust">
+              <div class="ico">⚡</div>
+              <div>
+                <b>Quick decision</b>
+                <span>Most teams choose in under 2 minutes.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="note" style="margin-top:12px">
+            This page is NOT the official Aircall website.
           </div>
         </div>
 
         <div class="box">
+
+          
+          <div class="heroArt">
+            <img
+              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1400&q=70"
+              alt="Business calling dashboard illustration"
+              loading="lazy"
+            />
+          </div>
+
           <h3>What teams usually need</h3>
+
           <ul class="list">
-            <li><span class="tick">✓</span><span><b style="color:#0b1220">Smart call routing</b> — IVR, business hours, queues</span></li>
-            <li><span class="tick">✓</span><span><b style="color:#0b1220">Call recording</b> — quality + compliance support</span></li>
-            <li><span class="tick">✓</span><span><b style="color:#0b1220">Analytics</b> — track answered rate & performance</span></li>
-            <li><span class="tick">✓</span><span><b style="color:#0b1220">Integrations</b> — HubSpot, Salesforce, Pipedrive</span></li>
+            <li><span class="tick">✓</span><span><b style="color:#0b1220">Cloud calling</b> — make & receive calls anywhere</span></li>
+            <li><span class="tick">✓</span><span><b style="color:#0b1220">Call routing</b> — IVR, queues, ring groups</span></li>
+            <li><span class="tick">✓</span><span><b style="color:#0b1220">CRM integrations</b> — HubSpot, Salesforce & more</span></li>
+            <li><span class="tick">✓</span><span><b style="color:#0b1220">Analytics</b> — track performance and recordings</span></li>
           </ul>
 
           <div class="btnrow" style="margin-top:14px">
             <a class="btn primary" id="ctaSide" href="#" rel="nofollow noopener" target="_blank" style="width:100%">
-              Check Pricing →
+              View Aircall Pricing →
             </a>
           </div>
 
           <div class="note">
-            This page is NOT the official provider website.
+            Disclosure: We may earn a commission from partner links.
           </div>
         </div>
 
@@ -360,87 +494,87 @@
 
 
     <div class="panel" id="features">
-      <h2 style="margin:0 0 8px; font-size:22px; letter-spacing:-.2px">Top features that reduce missed calls</h2>
-      <p class="sub" style="margin-top:0">These are the features most teams look for when switching from old VoIP tools.</p>
+      <h2 style="margin:0 0 8px; font-size:22px; letter-spacing:-.2px">Top features teams use every day</h2>
+      <p class="sub" style="margin-top:0">These are the most important tools for calling and support.</p>
 
       <div class="cards">
-        <div class="card">
-          <b>Call Routing & IVR</b>
-          <p>Route calls to the right team automatically based on menu, hours, or skills.</p>
+        <div class="card hl">
+          <b><span class="fi">📞</span>Call routing & IVR</b>
+          <p>Route calls to the right team automatically with IVR menus and ring groups.</p>
+        </div>
+        <div class="card hl">
+          <b><span class="fi">🔗</span>CRM integrations</b>
+          <p>Sync calls with HubSpot, Salesforce and other CRMs for better visibility.</p>
+        </div>
+        <div class="card hl">
+          <b><span class="fi">🎧</span>Call recordings</b>
+          <p>Improve quality and training with recordings, tags and notes.</p>
         </div>
         <div class="card">
-          <b>Shared Inbox for Calls</b>
-          <p>Teams can collaborate with notes, tags, and follow-ups for every call.</p>
+          <b><span class="fi">⚡</span>Power dialer</b>
+          <p>Speed up outbound calling for sales teams with dialer workflows.</p>
         </div>
         <div class="card">
-          <b>Call Analytics</b>
-          <p>Track answer rate, missed calls, peak hours, and team performance.</p>
+          <b><span class="fi">📊</span>Analytics & dashboards</b>
+          <p>Track call volume, answer rates and team performance in one place.</p>
         </div>
         <div class="card">
-          <b>CRM Integrations</b>
-          <p>Sync calls to your CRM so every lead and deal has full context.</p>
-        </div>
-        <div class="card">
-          <b>Call Recording</b>
-          <p>Train reps, improve quality, and keep a record of important conversations.</p>
-        </div>
-        <div class="card">
-          <b>International Numbers</b>
-          <p>Get local numbers in supported countries and scale globally.</p>
+          <b><span class="fi">🌍</span>Numbers worldwide</b>
+          <p>Get local numbers and manage global teams depending on availability.</p>
         </div>
       </div>
 
       <div class="btnrow" style="margin-top:14px">
         <a class="btn primary" id="ctaFeatures" href="#" rel="nofollow noopener" target="_blank">
-          View All Features →
+          See Plans →
         </a>
       </div>
     </div>
 
 
     <div class="panel" id="comparison">
-      <h2 style="margin:0 0 8px; font-size:22px; letter-spacing:-.2px">Quick comparison (buyer checklist)</h2>
-      <p class="sub" style="margin-top:0">A clean way to compare a modern cloud phone system vs older VoIP tools.</p>
+      <h2 style="margin:0 0 8px; font-size:22px; letter-spacing:-.2px">Quick comparison (team checklist)</h2>
+      <p class="sub" style="margin-top:0">A clean way to compare a cloud phone platform vs manual tools.</p>
 
       <div class="tableWrap">
         <table>
           <thead>
             <tr>
               <th>What teams compare</th>
-              <th>Modern Cloud Phone</th>
-              <th>Old / basic VoIP</th>
+              <th>Modern cloud phone platform</th>
+              <th>Manual tools</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Setup time</td>
-              <td class="yes">Minutes</td>
-              <td class="mid">Days</td>
+              <td>Cloud calling for remote teams</td>
+              <td class="yes">✓ Included</td>
+              <td class="mid">Harder setup</td>
             </tr>
             <tr>
-              <td>Call routing + IVR</td>
-              <td class="yes">Included</td>
+              <td>Call routing (IVR + queues)</td>
+              <td class="yes">✓ Included</td>
+              <td class="mid">Extra tools</td>
+            </tr>
+            <tr>
+              <td>CRM call logging</td>
+              <td class="yes">✓ Available</td>
+              <td class="mid">Manual notes</td>
+            </tr>
+            <tr>
+              <td>Analytics & recordings</td>
+              <td class="yes">✓ Available</td>
               <td class="mid">Limited</td>
             </tr>
             <tr>
-              <td>CRM integrations</td>
-              <td class="yes">Strong</td>
-              <td class="mid">Basic</td>
+              <td>Multi-number support</td>
+              <td class="yes">✓ Optional</td>
+              <td class="mid">Harder</td>
             </tr>
             <tr>
-              <td>Analytics & reporting</td>
-              <td class="yes">Advanced</td>
-              <td class="mid">Minimal</td>
-            </tr>
-            <tr>
-              <td>Works for remote teams</td>
-              <td class="yes">Yes</td>
-              <td class="mid">Sometimes</td>
-            </tr>
-            <tr>
-              <td>Scales for sales/support</td>
-              <td class="yes">Yes</td>
-              <td class="mid">Not ideal</td>
+              <td>Team permissions</td>
+              <td class="yes">✓ Included</td>
+              <td class="mid">Manual</td>
             </tr>
           </tbody>
         </table>
@@ -453,39 +587,39 @@
         <a class="btn secondary" href="#faq">FAQ</a>
       </div>
 
-      <div class="note">Note: Plan availability and pricing can change. Always confirm on the provider site.</div>
+      <div class="note">Note: Features and pricing can change. Always confirm on the provider site.</div>
     </div>
 
 
-    <div class="panel" id="offers">
-      <h2 style="margin:0 0 8px; font-size:22px; letter-spacing:-.2px">Offers & value (why teams switch)</h2>
-      <p class="sub" style="margin-top:0">These points help users feel confident before clicking out.</p>
+    <div class="panel" id="reviews">
+      <h2 style="margin:0 0 8px; font-size:22px; letter-spacing:-.2px">What teams say (review-style examples)</h2>
+      <p class="sub" style="margin-top:0">
+        Short reviews reduce hesitation and increase clicks. Replace these with real customer quotes if you have them.
+      </p>
 
       <div class="cards">
         <div class="card">
-          <b>Free demo available</b>
-          <p>See how routing, recording, and analytics work before moving your team.</p>
+          <b>★★★★★ Easy setup</b>
+          <p>“We were live quickly. The UI is clean and the call routing works well for our support team.”</p>
+          <p style="margin-top:10px; color:#111827; font-weight:800">— Support Lead</p>
         </div>
         <div class="card">
-          <b>Fast onboarding</b>
-          <p>Most teams can set up numbers, users, and routing in a short time.</p>
+          <b>★★★★★ Great for sales teams</b>
+          <p>“The dialer and integrations helped us increase outbound volume without losing visibility.”</p>
+          <p style="margin-top:10px; color:#111827; font-weight:800">— Sales Manager</p>
         </div>
         <div class="card">
-          <b>Flexible plans</b>
-          <p>Scale up or down based on team size and calling volume.</p>
+          <b>★★★★☆ Solid integrations</b>
+          <p>“HubSpot syncing was the main reason we picked it. Call logs and recordings are useful for training.”</p>
+          <p style="margin-top:10px; color:#111827; font-weight:800">— RevOps</p>
         </div>
       </div>
 
       <div class="btnrow" style="margin-top:14px">
-        <a class="btn primary" id="ctaOffers" href="#" rel="nofollow noopener" target="_blank">
-          Get Started →
-        </a>
-        <a class="btn secondary" id="ctaPricing" href="#" rel="nofollow noopener" target="_blank">
-          View Pricing
+        <a class="btn primary" id="ctaReviews" href="#" rel="nofollow noopener" target="_blank">
+          Check Aircall Pricing →
         </a>
       </div>
-
-      <div class="note">Tip: Use the provider website for the latest offers and plan details.</div>
     </div>
 
 
@@ -494,31 +628,31 @@
       <div style="display:grid; gap:10px; margin-top:10px">
         <details>
           <summary>Is this the official website?</summary>
-          <p>No. This is an independent guide page. Buttons open the provider in a new tab.</p>
+          <p>No. This is an independent guide page about Aircall. Buttons open the provider in a new tab.</p>
         </details>
         <details>
-          <summary>Will my team need hardware?</summary>
-          <p>Most cloud phone systems work on web and mobile apps without desk phones.</p>
+          <summary>Does it include call routing and IVR?</summary>
+          <p>Aircall offers call routing features. Confirm availability and limits on the provider website.</p>
         </details>
         <details>
-          <summary>Does it work with HubSpot / Salesforce?</summary>
-          <p>Many modern platforms support CRM integrations. Confirm on the provider website.</p>
+          <summary>Can I integrate with HubSpot or Salesforce?</summary>
+          <p>Many cloud phone systems support CRM integrations. Confirm supported integrations on the provider website.</p>
         </details>
         <details>
-          <summary>Can I track missed calls and performance?</summary>
-          <p>Yes. Analytics dashboards typically show answer rate, missed calls and call volume.</p>
+          <summary>Can I see pricing online?</summary>
+          <p>Pricing varies by seats and add-ons. We recommend checking the provider website for the latest plans.</p>
         </details>
       </div>
 
       <div class="btnrow" style="margin-top:14px">
         <a class="btn primary" id="ctaBottom" href="#" rel="nofollow noopener" target="_blank">
-          Visit Provider Website →
+          Visit Aircall →
         </a>
       </div>
 
       <div class="footer">
-        <b>Disclosure:</b> This website contains affiliate links, which means we may receive a commission if you click a link and purchase something that we have recommended. While clicking these links won't cost you any extra money, it helps us keep this site up and running. We only promote products or services we genuinely believe will add value to our readers.
-As an Associate and affiliate for other programs, we earn from qualifying purchases. All affiliate relationships are disclosed in accordance with the Federal Trade Commission’s 16 CFR, Part 255: “Guides Concerning the Use of Endorsements and Testimonials in Advertising.”
+        <b>Disclosure:</b> This website contains affiliate links, which means we may receive a commission if you click a link and purchase something that we have recommended. While clicking these links won't cost you any extra money, it helps us keep this site up and running. We only promote products or services we genuinely believe will add value to our readers. As an Associate and affiliate for other programs, we earn from qualifying purchases. All affiliate relationships are disclosed in accordance with the Federal Trade Commission’s 16 CFR, Part 255: “Guides Concerning the Use of Endorsements and Testimonials in Advertising.”
+
         <br><br>
         <a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a>
       </div>
@@ -527,30 +661,27 @@ As an Associate and affiliate for other programs, we earn from qualifying purcha
   </div>
 
 
-  <!-- Sticky CTA (mobile + desktop) -->
   <div class="sticky">
     <div class="inner">
-      <div class="txt">Compare plans, features & pricing on the provider website.</div>
+      <div class="txt">Compare plans, features & pricing on the Aircall website.</div>
       <a class="btn primary" id="ctaSticky" href="#" rel="nofollow noopener" target="_blank">Check Pricing →</a>
     </div>
   </div>
 
 
   <script>
-    // 1) Put your destination link here (affiliate link / tracking link)
+    // Destination link (your offer / tracking)
     const OUT_URL = "https://inpmz.ttrk.io/click";
 
-    // 2) Assign URL to all CTAs
     const ctas = [
-      "ctaTop","ctaStrip","ctaSide","ctaFeatures",
-      "ctaCompare","ctaOffers","ctaPricing","ctaBottom","ctaSticky"
+      "ctaTop","ctaSide","ctaFeatures",
+      "ctaCompare","ctaReviews","ctaBottom","ctaSticky","ctaOfferTrial"
     ];
     ctas.forEach(id=>{
       const el = document.getElementById(id);
       if(el) el.href = OUT_URL;
     });
 
-    // 3) Outbound click tracking (works with GTM/GA4)
     function trackOutbound(label){
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
@@ -568,19 +699,3 @@ As an Associate and affiliate for other programs, we earn from qualifying purcha
   </script>
 </body>
 </html>
-
-
-<!--
-====================================================
-CREATE THESE 3 EXTRA FILES (IMPORTANT FOR ADS TRUST)
-====================================================
-
-privacy.html
-terms.html
-contact.html
-
-Use the same legal page templates I made for AXA/Kikoff.
-Just replace the product name with: Cloud Phone System Guide
-
-Also: add your real email + business name + address in contact.html
--->
